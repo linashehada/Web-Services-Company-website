@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+:root{
+	--color: #04AA6D;
+}
+
+*{
+    margin:0;
+	padding:0;
+	font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear; /* this just adds an extra fade-in effect when you first enter the site*/
+    text-decoration: none;
+}
+
+html{
+	overflow-x: hidden;
+    scroll-behavior: smooth; /* in order for it to slide/scroll to the sections smoothly*/
+}
+
+
+/* heading used for all sections */
+
+.heading{
+    margin: 2rem;
+    padding-top: 6rem;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: var(--color);
+    position: relative;
+    letter-spacing: .2rem;
+}
+
+.heading::before, .heading::after{
+    content: '';
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-top: .4rem solid var(--color);
+    border-left: .4rem solid var(--color);
+}
+
+.heading::before{
+    top: 5.8rem;
+    left: -2rem;
+}
+
+.heading::after{
+    bottom: -.5rem;
+    right: -2rem;
+    transform: rotate(180deg);
+}
+  
+
+/*---------------------------------navbar---------------------------------*/
+
+.collapse > .navbar-nav > .nav-item > a {
+    color: white;
+            }
+
+.collapse > .navbar-nav > .nav-item  {
+    box-sizing: border-box;
+    height: 40px;
+    
+            }
+
+@media only screen and (min-width: 768px){
+.collapse > .navbar-nav > .nav-item:hover {
+	border-bottom: 2.5px solid var(--color);
+	
+            }
+}
+
+
+/*---------------------------------home section---------------------------------*/
+
+.home{
+	background-image:linear-gradient(rgba(2,2,1,0.45),rgba(2,2,1,0.45)),url("images/banner2.jpg"); 
+	min-height:100vh;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+
+}
+
+
+.home .container {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    max-width:100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+
+.home h1{
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0 0.3rem 0.3rem rgba(0,0,0,0.3);
+}
+
+.home h3{
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    text-shadow: 0 0.3rem 0.3rem rgba(0,0,0,0.3);
+}
+
+.home button{  
+    /* background color */
+    background: var(--color);
+    color: white; /* text color */
+    height: 5rem;
+    width: 18rem;
+    border-radius: 50px; /* rounded corners */
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    width: 100%;
+    max-width: 250px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 1.6rem;
+    box-sizing: 0 0.3 0.3 rgba(0,0,0,0.3);
+
+}
+ 
+.home button:hover {
+    /*letter-spacing: .1rem;*/
+    transform: scale(1.2);
+    color:white;
+
+}
+
+/*---------about section------------*/
+
+.about{
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 4rem;
+}
+
+.about .row .content{
+    text-align: left;
+}
+
+.about .row .image img{
+    width: 50vw;
+      
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: var(--color);
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+/* the extra circular shapes in the background */
+/* right side */
+.about::before, .about::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    opacity: .2;
+    border-radius: 50%;
+}
+ /* left side */
+.about::before{
+    height: 50rem;
+    width: 50rem;
+    background-color: #ccc;
+    bottom: -10rem;
+    left: -10rem;
+}
+
+.about::after{
+    height: 60rem;
+    width: 60rem;
+    background-color: var(--color);
+    top: -10rem;
+    right: -10rem;
+}
+
+.about button{  
+    /* background color */
+    background: var(--color);
+    color: white; /* text color */
+    height: 3.5rem;
+    width: 15rem;
+    border-radius: 50px; /* rounded corners */
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    width: 100%;
+    max-width: 200px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    box-sizing: 0 0.3 0.3 rgba(0,0,0,0.3);
+
+}
+   
+.btn:hover {
+    /*letter-spacing: .1rem;*/
+    transform: scale(1.2);
+    color:white;
+
+}
+
+
+/*----------------------------services section------------------------------*/
+
+/* Float four columns side by side */
+.services .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.services .row {
+	margin: 0 -5px;
+	background-color: #343a40!important;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+	filter:brightness(90%);
+}
+
+
+
+
+/* Clear floats after the columns */
+.services .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the counter cards */
+.card {
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+.services button{  
+    /* background color */
+    background: #04AA6D;
+    color: white; /* text color */
+    height: 3.5rem;
+    width: 15rem;
+    border-radius: 50px; /* rounded corners */
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    width: 100%;
+    max-width: 200px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    box-sizing: 0 0.3 0.3 rgba(0,0,0,0.3);
+
+}
+ 
+.btn:hover {
+    /*letter-spacing: .1rem;*/
+    transform: scale(1.2);
+    color:white;
+
+}
+
+
+/*------------contact us section-----------------*/
+
+.contactus .row{
+	padding-top: 3rem;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text] ,input[type=tel],input[type=email], textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 20px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+.contactus .container .row form .inputbox{
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactus .container .row form .inputbox input[type=text]{
+    width: 47%;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    cursor: pointer;
+    margin: auto;
+    color: white; /* text color */
+    height: 3.5rem;
+    width: 10rem;
+    border-radius: 50px; /* rounded corners */
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    width: 80%;
+    max-width: 200px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    box-sizing: 0 0.3 0.3 rgba(0,0,0,0.3);
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+.contactus .center{
+	margin: auto; 
+	text-align: center;
+}
+
+/* Add a background color and some padding around the form */
+.contactus  {
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 100%;
+}
+
+
+/* ---------------------footersection -------------------------*/
+
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #343a40!important;
+}
+
+.footer h1{
+    color: white;
+    letter-spacing: .1rem;
+    font-size: 1.1rem;
+}
+
+.footer .icons a{
+    color: white;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
