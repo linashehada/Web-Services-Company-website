@@ -279,7 +279,7 @@ html{
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
     width: 100%;
-    max-width: 200px;
+    max-width: 150px;
     cursor: pointer;
     border: none;
     outline: none;
